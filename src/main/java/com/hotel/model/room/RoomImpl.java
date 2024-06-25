@@ -6,17 +6,17 @@ import java.util.Objects;
 
 public class RoomImpl implements Room {
 
-    private final String roomNumber;
+    private final int roomNumber;
     private final double price;
     private final RoomType type;
 
-    public RoomImpl(final String roomNumber, final double price, final RoomType type) {
+    public RoomImpl(final int roomNumber, final double price, final RoomType type) {
         this.roomNumber = roomNumber;
         this.price = price;
         this.type = type;
     }
 
-    public String getRoomNumber() {
+    public int getRoomNumber() {
         return this.roomNumber;
     }
 

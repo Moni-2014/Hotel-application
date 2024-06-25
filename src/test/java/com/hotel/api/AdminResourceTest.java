@@ -41,8 +41,8 @@ class AdminResourceTest {
 
     @Test
     void getAllRooms_Should_ReturnRooms_When_RepoReturnsRooms() {
-        Collection<Room> rooms = List.of(new RoomImpl("1234", 34.2, RoomType.DOUBLE),
-                new RoomImpl("54322133", 23.1, RoomType.SINGLE));
+        Collection<Room> rooms = List.of(new RoomImpl(1234, 34.2, RoomType.DOUBLE),
+                new RoomImpl(54322133, 23.1, RoomType.SINGLE));
         Mockito.when(reservationRepository.getAllRooms()).thenReturn(rooms);
 
         Collection<Room> actual = adminResource.getAllRooms();

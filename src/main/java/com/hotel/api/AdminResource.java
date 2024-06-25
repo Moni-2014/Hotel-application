@@ -19,7 +19,7 @@ public class AdminResource {
         this.reservationRepository = reservationRepository;
     }
 
-    public void addRoom(String roomNumber, double price, RoomType type) {
+    public void addRoom(int roomNumber, double price, RoomType type) {
         reservationRepository.addRoom(roomNumber, price, type);
     }
 

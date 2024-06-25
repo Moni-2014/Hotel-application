@@ -76,7 +76,7 @@ public class AdminMenu {
         final Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter room number:");
-        final String roomNumber = scanner.nextLine();
+        final int roomNumber = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Enter price per night:");
         final double roomPrice = enterRoomPrice(scanner);

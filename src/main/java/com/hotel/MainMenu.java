@@ -125,9 +125,9 @@ public class MainMenu {
                     System.out.println("Customer not found.\nYou may need to create a new account.");
                 } else {
                     System.out.println("What room number would you like to reserve?");
-                    final String roomNumber = scanner.nextLine();
+                    final int roomNumber = Integer.parseInt(scanner.nextLine());
 
-                    if (rooms.stream().anyMatch(room -> room.getRoomNumber().equals(roomNumber))) {
+                    if (rooms.stream().anyMatch(room -> room.getRoomNumber() == roomNumber)) {
                         final Room room = hotelResource.getRoom(roomNumber);
 
                         final Reservation reservation = hotelResource

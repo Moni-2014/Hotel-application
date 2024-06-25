@@ -9,10 +9,10 @@ import java.util.Collection;
 import java.util.Date;
 
 public interface ReservationRepository {
-    void addRoom(String roomNumber, double price, RoomType type);
+    void addRoom(int roomNumber, double price, RoomType type);
     Collection<Room> getAllRooms();
     Collection<Reservation> getAllReservations();
-    Room getARoom(String roomNumber);
+    Room getARoom(int roomNumber);
     Collection<Reservation> getCustomersReservation(Customer customer);
     Collection<Room> findRooms(Date checkIn, Date checkOut);
     Collection<Room> findAlternativeRooms(Date checkIn, Date checkOut);

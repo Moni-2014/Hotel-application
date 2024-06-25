@@ -12,18 +12,18 @@ import java.util.stream.Collectors;
 
 public class ReservationRepositoryImpl implements ReservationRepository{
     private static final int RECOMMENDED_ROOMS_DEFAULT_PLUS_DAYS = 7;
-    private final Map<String, Room> rooms = new HashMap<>();
+    private final Map<Integer, Room> rooms = new HashMap<>();
     private final Map<String, Collection<Reservation>> reservations = new HashMap<>();
 
     public ReservationRepositoryImpl() {}
 
 
-    public void addRoom(String roomNumber, double price, RoomType type) {
+    public void addRoom(int roomNumber, double price, RoomType type) {
         Room newRoom = new RoomImpl(roomNumber, price, type);
         rooms.put(roomNumber, newRoom);
     }
 
-    public Room getARoom(final String roomNumber) {
+    public Room getARoom(final int roomNumber) {
         return rooms.get(roomNumber);
     }
 

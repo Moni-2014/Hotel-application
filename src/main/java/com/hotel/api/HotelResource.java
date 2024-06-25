@@ -29,7 +29,7 @@ public class HotelResource {
         customerService.addCustomer(email, firstName, lastName);
     }
 
-    public Room getRoom(String roomNumber) {
+    public Room getRoom(int roomNumber) {
         return reservationService.getARoom(roomNumber);
     }
 
